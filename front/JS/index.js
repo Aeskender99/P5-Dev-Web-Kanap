@@ -1,7 +1,3 @@
-// variable globale qui va contenir la liste des produits dans un array
-let products = [];
-
-
 // fonction qui récupére les données des produits dans l'api mise a disposition
 async function getProducts () {
    await fetch("http://localhost:3000/api/products/")
