@@ -12,3 +12,6 @@ if(searchId.has("id")) {
 //affichage de l'id de commande
 let orderId = document.getElementById("orderId");
 orderId.innerText = id;
+
+// On supprime le localstorage pour ne pas conservé l'identifiant de commande 
+localStorage.clear();
