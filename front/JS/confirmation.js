@@ -1,16 +1,16 @@
-//déclaration des variables globales
-let href = window.location.href;
-let url = new URL(href);
-let searchId = new URLSearchParams(url.search);
+/**récupère l'orderid dans l'URL*/
+function getUrlorderId() {
+  let str = window.location.href;
+  let url = new URL(str);
+  let id = url.searchParams.get("orderid");
+  return id;
+}
+/**fonction principale récupère le l'orderid puis le passe dans le HTML*/
+function main() {
+  document.getElementById("orderId").textContent = getUrlorderId();
+}
 
-//recherche de l'id de commande dans l'url
-if(searchId.has("id")) {
-    id = searchId.get("id");
-  }
-
-//affichage de l'id de commande
-let orderId = document.getElementById("orderId");
-orderId.innerText = id;
+main();
 
 // On supprime le localstorage pour ne pas conservé l'identifiant de commande 
 localStorage.clear();
