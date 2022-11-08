@@ -388,6 +388,8 @@ if (document.location.pathname.endsWith("/front/html/cart.html")) {
         const orderId = confirmationDatas.orderId;
         document.location.href = "./confirmation.html?orderid=" + orderId;
       }
+      // On supprime le localstorage pour ne pas conservé l'identifiant de commande 
+      localStorage.clear(); 
     });
   } else {
     // Affichage de l'ID de commande :
