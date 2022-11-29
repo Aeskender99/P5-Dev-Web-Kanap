@@ -12,3 +12,5 @@ function main() {
 
 main();
 
+// On supprime le localstorage pour ne pas conservé l'identifiant de commande 
+localStorage.clear(); 
